@@ -14,8 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/griglia.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-
-    <script src="js/modernizr-custom.js"></script>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 </head>
 
@@ -102,7 +100,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <h1 class="text-white">Pannello 5</h1>
-                    <h2 class="text-white"><div class="row"></h2>
+                    <h2 class="text-white"></h2>
                     <h2 class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
                 </div>
             </div>
@@ -130,8 +128,14 @@
             </div>
         </div>
     </section>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/jquery.stellar.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+        $(window).stellar();
+    });
+    </script>
+    <script src="js/modernizr-custom.js"></script>
     <script>
     jQuery(document).ready(function($) {
         if (Modernizr.touch) {
@@ -159,7 +163,7 @@
         b[l].l = +new Date();
         e = o.createElement(i);
         r = o.getElementsByTagName(i)[0];
-        e.src = '//www.google-analytics.com/analytics.js';
+        e.src = 'http://www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e, r);
     }(window, document, 'script', 'ga'));
     ga('create', 'UA-XXXXX-X');
