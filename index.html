@@ -23,7 +23,7 @@
         <![endif]-->
     <!-- Add your site or application content here -->
     <header class="menu">
-        <div class="container">
+        <div class="nav-container">
             <nav>
                 <ul class="navigation">
                     <li><a href="#slide1">Pannello 1</a></li>
@@ -129,6 +129,22 @@
         </div>
     </section>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script>
+    $(function() {
+
+        // Do our DOM lookups beforehand
+        var nav_container = $(".nav-container");
+        var nav = $("nav");
+
+        nav_container.waypoint({
+            handler: function(event, direction) {
+                nav.toggleClass('sticky', direction == 'down');
+            }
+        });
+
+    });
+    </script>
     <script src="js/jquery.stellar.js"></script>
     <script>
     jQuery(document).ready(function($) {
@@ -146,12 +162,12 @@
         }
     });
     </script>
-    <script src="js/jquery.singlePageNav.js"></script>
+    <!--<script src="js/jquery.singlePageNav.js"></script>
     <script>
     $('.navigation').singlePageNav({
         updateHash: true
     });
-    </script>
+    </script>-->
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
     (function(b, o, i, l, e, r) {
