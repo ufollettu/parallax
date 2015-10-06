@@ -22,6 +22,9 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <!-- Add your site or application content here -->
+    <div class="logo">
+        <img src="images/logo.png" alt="logo">
+    </div>
     <header class="menu">
         <div class="nav-container">
             <nav>
@@ -130,27 +133,8 @@
     </section>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
-    <script>
-    $(function() {
-
-        // Do our DOM lookups beforehand
-        var nav_container = $(".nav-container");
-        var nav = $("nav");
-
-        nav_container.waypoint({
-            handler: function(event, direction) {
-                nav.toggleClass('sticky', direction == 'down');
-            }
-        });
-
-    });
-    </script>
-    <script src="js/jquery.stellar.js"></script>
-    <script>
-    jQuery(document).ready(function($) {
-        $(window).stellar();
-    });
-    </script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/navbar2.js"></script>
     <script src="js/modernizr-custom.js"></script>
     <script>
     jQuery(document).ready(function($) {
@@ -162,12 +146,6 @@
         }
     });
     </script>
-    <!--<script src="js/jquery.singlePageNav.js"></script>
-    <script>
-    $('.navigation').singlePageNav({
-        updateHash: true
-    });
-    </script>-->
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
     (function(b, o, i, l, e, r) {
