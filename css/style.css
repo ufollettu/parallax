@@ -23,7 +23,7 @@ a:hover {
     text-decoration: none;
 }
 
-a.current {
+a.selected {
     color: #5781CA;
 }
 
@@ -44,17 +44,18 @@ h2 {
 .text-white {
     color: #fff
 }
+
 .logo {
     position: relative;
-    width:100%;
+    width: 100%;
     margin: 10px;
     background-color: blue;
-    background: -webkit-linear-gradient(top, rgba(120,100,255,1) 0%,rgba(255,255,255,0) 100%);
-    background: -moz-linear-gradient(top, rgba(120,100,255,1) 0%,rgba(255,255,255,0) 100%);
-    background: linear-gradient(top, rgba(120,100,255,1) 0%,rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(120, 100, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -moz-linear-gradient(top, rgba(120, 100, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(top, rgba(120, 100, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     z-index: 2;
-
 }
+
 .menu {
     position: relative;
     padding-top: 10px;
@@ -88,21 +89,45 @@ nav {
     display: inline-block;
     padding: 0 25px 0 0;
 }
+/*clearfix*/
+.wrapper:before,
+.wrapper:after {
+    content: '';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    clear: both;
+    zoom: 1
+}
 
 .sticky {
     position: fixed;
     top: 15px;
     background-color: #E02C1B;
+    animation:thedrop 1s 1;
+    -moz-animation:thedrop 1s 1;
+    -webkit-animation:thedrop 1s 1;
 }
 
 .sticky .nav-above {
-  position: absolute;
-  top:-15px;
-  left:1em;
-  right:1em;
-  height:15px;
-  background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-  /* add cross-browser gradient code as needed */
+    position: absolute;
+    top: -15px;
+    left: 1em;
+    right: 1em;
+    height: 15px;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    /*add cross-browser gradient code as needed */
+}
+
+nav li a.selected {
+    color: black;
+    background: #40bfe8;
 }
 
 .slide {
